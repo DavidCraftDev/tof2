@@ -1,0 +1,5 @@
+- name: Send message to ms teams
+  uses: dhollerbach/actions.send-message-to-ms-teams@1.0.10
+  with:
+    webhook: 'https://gkgede.webhook.office.com/webhookb2/c9fa5709-d69e-465d-90ee-e0cadfdbaf79@2551d767-dbc7-43db-9436-bb350b79c4bf/IncomingWebhook/14a286d54c0b4c50a7e5b83451aedcc4/7ef96fe4-fd2f-4895-ad48-af73c3a68dfd'
+    message: 'W00t it werked!'
