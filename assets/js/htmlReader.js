@@ -1,6 +1,5 @@
 function readHTML (url, div) {
     fetch(url)
-        .then(response => console.log(response))
-        .then(response => response.text())
-        .then(text => div.innerHTML = text)
+        .then(response => { return response.text() })
+        .then(text => { document.getElementById(div).innerHTML = text })
 }
