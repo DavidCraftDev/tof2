@@ -5,5 +5,8 @@
 @layer base {
     nav {
         @apply bg-gray-800;
+        @apply text-white;
+        @apply w-screen;
+        @apply h-16;
     }
 }
