@@ -525,6 +525,14 @@ nav {
   --tw-backdrop-sepia:  ;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -537,4 +545,9 @@ nav {
 .bg-teal-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(20 184 166 / var(--tw-bg-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
