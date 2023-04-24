@@ -516,6 +516,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.right-0 {
+  right: 0px;
+}
+
 .h-16 {
   height: 4rem;
 }
