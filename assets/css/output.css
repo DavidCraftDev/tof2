@@ -516,6 +516,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.flex {
+  display: flex;
+}
+
 .h-16 {
   height: 4rem;
 }
@@ -524,8 +528,16 @@ video {
   width: 100vw;
 }
 
+.justify-start {
+  justify-content: flex-start;
+}
+
 .justify-end {
   justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
 }
 
 .rounded-lg {
