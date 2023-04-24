@@ -528,6 +528,14 @@ video {
   width: 100vw;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-rows-1 {
+  grid-template-rows: repeat(1, minmax(0, 1fr));
+}
+
 .justify-self-start {
   justify-self: start;
 }
@@ -556,10 +564,6 @@ video {
 
 .p-1 {
   padding: 0.25rem;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .text-white {
