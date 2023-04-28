@@ -576,9 +576,9 @@ video {
   border-width: 2px;
 }
 
-.border-cyan-900 {
+.border-cyan-800 {
   --tw-border-opacity: 1;
-  border-color: rgb(22 78 99 / var(--tw-border-opacity));
+  border-color: rgb(21 94 117 / var(--tw-border-opacity));
 }
 
 .bg-slate-800 {
