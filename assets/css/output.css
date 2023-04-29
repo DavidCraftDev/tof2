@@ -655,10 +655,6 @@ video {
     display: flex;
   }
 
-  .md\:h-16 {
-    height: 4rem;
-  }
-
   .md\:items-center {
     align-items: center;
   }
