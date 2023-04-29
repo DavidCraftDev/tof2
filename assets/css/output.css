@@ -546,10 +546,6 @@ video {
   display: flex;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .w-full {
   width: 100%;
 }
@@ -564,10 +560,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-between {
-  justify-content: space-between;
 }
 
 .rounded-lg {
@@ -653,6 +645,10 @@ video {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:h-16 {
+    height: 4rem;
   }
 
   .md\:items-center {
