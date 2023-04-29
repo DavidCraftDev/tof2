@@ -546,8 +546,8 @@ video {
   display: flex;
 }
 
-.w-full {
-  width: 100%;
+.max-w-full {
+  max-width: 100%;
 }
 
 .list-none {
@@ -649,6 +649,10 @@ video {
 
   .md\:h-16 {
     height: 4rem;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:items-center {
