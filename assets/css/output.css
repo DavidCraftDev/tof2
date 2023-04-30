@@ -570,8 +570,8 @@ video {
   align-items: center;
 }
 
-.justify-between {
-  justify-content: space-between;
+.justify-items-center {
+  justify-items: center;
 }
 
 .rounded-lg {
