@@ -11,6 +11,8 @@
                 username: username,
                 password: password
             })
-        }).then((response) => alert(response))
+        }).then((response) => response.json()).then((data) => {
+            alert(data);
+        })
     });
 </script>
