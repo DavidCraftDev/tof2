@@ -12,8 +12,8 @@
              // 'Content-Type': 'application/x-www-form-urlencoded',
               },
             body: JSON.stringify({
-                username: "username",
-                password: "password"
+                username: String(username),
+                password: String(password)
             })
         }).then((response) => response.json()).then((data) => {
             alert(data);
