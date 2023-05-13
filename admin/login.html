@@ -7,9 +7,13 @@
         let password = document.getElementById("password").value;
         fetch("https://api-tof2.davidcraft.de/autorize", {
             method: "POST",
+            headers: {
+             "Content-Type": "application/json",
+             // 'Content-Type': 'application/x-www-form-urlencoded',
+              },
             body: JSON.stringify({
-                username: username,
-                password: password
+                username: "username",
+                password: "password"
             })
         }).then((response) => response.json()).then((data) => {
             alert(data);
