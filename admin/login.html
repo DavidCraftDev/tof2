@@ -17,10 +17,6 @@
             })
         }).then((response) => response.json()).then((data) => {
             alert(data);
-            if(data == "true") {
-                document.cookie = "username=" + username + "; path=/";
-                document.cookie = "password=" + password + "; path=/";
-            }
         })
     });
 </script>
