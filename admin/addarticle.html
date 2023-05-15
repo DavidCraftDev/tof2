@@ -1,0 +1,30 @@
+<input type="text" placeholder="Username" id="username">
+<input type="text" placeholder="Password" id="password">
+<input type="text" placeholder="title" id="title">
+<input type="text" placeholder="beschreibung" id="beschreibung">
+<input type="text" placeholder="katerogie" id="katerogie">
+<input type="text" placeholder="markdown" id="markdown">
+<button>Send</button>
+<script>
+    document.querySelector("button").addEventListener("click", () => {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        let title = document.getElementById("title").value;
+        let beschreibung = document.getElementById("beschreibung").value;
+        let katerogie = document.getElementById("katerogie").value;
+        let markdown = document.getElementById("markdown").value;
+        fetch("https://api-tof2.davidcraft.de/autorize?title=" + title + "&beschreibung=" + beschreibung + "&katerogie=" + katerogie + "&markdown=" + markdown, {
+            method: "POST",
+            headers: {
+             "Content-Type": "application/json",
+             // 'Content-Type': 'application/x-www-form-urlencoded',
+              },
+            body: JSON.stringify({
+                username: String(username),
+                password: String(password)
+            })
+        }).then((response) => response.json()).then((data) => {
+            alert(data);
+        })
+    });
+</script>
