@@ -15,7 +15,7 @@
         let katerogie = document.getElementById("katerogie").value;
         let markdown = document.getElementById("markdown").value;
         let id = document.getElementById("id").value;
-        fetch("https://api-tof2.davidcraft.de/updatearticle.html?title=" + title + "&beschreibung=" + beschreibung + "&katerogie=" + katerogie + "&markdown=" + markdown + "&id=" + id, {
+        fetch("https://api-tof2.davidcraft.de/updatearticle?title=" + title + "&beschreibung=" + beschreibung + "&katerogie=" + katerogie + "&markdown=" + markdown + "&id=" + id, {
             method: "POST",
             headers: {
              "Content-Type": "application/json",
