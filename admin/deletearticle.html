@@ -1,0 +1,24 @@
+<input type="text" placeholder="Username" id="username">
+<input type="text" placeholder="Password" id="password">
+<input type="text" placeholder="id" id="id">
+<button>Send</button>
+<script>
+    document.querySelector("button").addEventListener("click", () => {
+        let username = String(document.getElementById("username").value)
+        let password = String(document.getElementById("password").value)
+        let id = String(document.getElementById("id").value)
+        fetch("https://api-tof2.davidcraft.de/removearticle?id=" + id, {
+            method: "DELETE",
+            headers: {
+             "Content-Type": "application/json",
+             // 'Content-Type': 'application/x-www-form-urlencoded',
+              },
+            body: JSON.stringify({
+                username: String(username),
+                password: String(password)
+            })
+        }).then((response) => response.json()).then((data) => {
+            alert(data);
+        })
+    });
+</script>
