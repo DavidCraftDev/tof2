@@ -1,18 +1,32 @@
-<input type="text" placeholder="Frage" id="frage">
-<input type="text" placeholder="Mail" id="mail">
-<button>Send</button>
-<script>
-    document.querySelector("button").addEventListener("click", () => {
-        let frage = String(document.getElementById("frage").value)
-        let mail = String(document.getElementById("mail").value)
-        fetch("https://api-tof2.davidcraft.de/addquestion?frage=" + frage + "&mail=" + mail, {
-            method: "POST",
-            headers: {
-             "Content-Type": "application/json",
-             // 'Content-Type': 'application/x-www-form-urlencoded',
-              },
-        }).then((response) => response.json()).then((data) => {
-            alert(data);
-        })
-    });
-</script>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Startseite - Teacher of Future 2</title>
+        <link href="./assets/css/output.css" rel="stylesheet">
+        <script src="./assets/js/htmlReader.js"></script>
+    </head>
+    <body class="bg-gradient-to-r from-cyan-500 to-blue-500">
+        <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
+        <div id="content" class="align-middle">
+            <input type="text" placeholder="Frage" id="frage">
+            <input type="text" placeholder="Mail" id="mail">
+            <button>Send</button>
+            <script>
+                document.querySelector("button").addEventListener("click", () => {
+                    let frage = String(document.getElementById("frage").value)
+                    let mail = String(document.getElementById("mail").value)
+                    fetch("https://api-tof2.davidcraft.de/addquestion?frage=" + frage + "&mail=" + mail, {
+                        method: "POST",
+                        headers: {
+                         "Content-Type": "application/json",
+                         // 'Content-Type': 'application/x-www-form-urlencoded',
+                          },
+                    }).then((response) => response.json()).then((data) => {
+                        alert(data);
+                    })
+                });
+            </script>
+        </div>
+        <div id="footer" class="absolute bottom-0 w-full"><script>readHTML("./assets/elements/footer.html", "footer")</script></div>
+    </body>
+</html>
