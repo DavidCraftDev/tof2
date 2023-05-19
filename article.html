@@ -11,14 +11,7 @@
         <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
         <div id="content" class="align-middle">
             <script>
-                function getID(id) {
-                    return items.filter(
-                        function (data) {
-                            return data.id == id
-                        }
-                    );
-                }
-                var id = getID(window.location.search.substring(1))
+                var id = window.location.search.substring(1)
                 
                 if(id == undefined) {
                     //window.location.href = "./index.html"
