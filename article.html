@@ -13,9 +13,10 @@
             <script>
                 var id = window.location.search.substring(1).id
                 if(id == undefined) {
-                    window.location.href = "./index.html"
+                    //window.location.href = "./index.html"
                 }
                 alert(id)
+                alert(window.location.search.substring(1))
             </script>
         </div>
         <div id="footer" class="absolute bottom-0 w-full"><script>readHTML("./assets/elements/footer.html", "footer")</script></div>
