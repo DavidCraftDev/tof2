@@ -10,9 +10,9 @@
         <div id="content" class="align-middle">
             <p class="text-1xl md:text-2xl text-left ml-4 mt-4 text-Black font-bold">Frage vorschlagen</p>
             <p class="text-lg md:text-1xl text-left ml-4 mt-2 mb-4 text-Black">Du hast eine weitere Frage? Dann schlage sie hier auf der Seite vor</p>
-            <input type="text" placeholder="Frage" id="frage" class="ml-2 mt-2 border-2 border-black">
-            <input type="text" placeholder="E-Mail Ardresse" id="mail" class="ml-2 mt-2 border-2 border-black">
-            <button class="mt-2 ml-2 bg-black rounded-lg text-white p-2 border-2 border-white">Send</button>
+            <input type="text" placeholder="Frage" id="frage" class="ml-2 mt-2 border-2 border-black rounded-lg">
+            <input type="text" placeholder="E-Mail Ardresse" id="mail" class="ml-2 mt-2 border-2 border-black rounded-lg">
+            <button class="mt-2 ml-2 bg-black rounded-lg text-white p-1 pl-2 pr-2 border-2 border-white">Send</button>
             <script>
                 document.querySelector("button").addEventListener("click", () => {
                     let frage = String(document.getElementById("frage").value)
