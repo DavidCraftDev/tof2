@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+      @apply text-2xl;
+      @apply font-bold;
+      @apply pt-2;
+      @apply pb-2;
+    }
+  
+    h2 {
+      @apply text-xl;
+      @apply font-bold;
+      @apply pt-2;
+      @apply pb-2;
+    }
+  
+    ul {
+      @apply list-disc;
+      @apply pl-8;
+    }
+  
+    pre {
+      @apply overflow-x-auto;
+      @apply bg-gray-800;
+      @apply text-white;
+      @apply rounded-lg;
+      @apply p-4;
+    }
+  
+    code {
+      @apply bg-gray-800;
+      @apply text-white;
+      @apply rounded-lg;
+      @apply p-1;
+    }
+}
