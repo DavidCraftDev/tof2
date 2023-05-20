@@ -10,16 +10,24 @@
     </head>
     <body>
         <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
-        <div id="content" class="align-middle">
+        <div id="content" class="align-middle pr-2 pl-2">
             <script>
                 var id = new URL(window.location.href).searchParams.get("id")
                 
                 if(id == undefined) {
                     window.location.href = "./index.html"
                 } else {
+                    fetch("https://api-tof2.davidcraft.de/article?id=" + id, {
+                        method: "GET",
+                        headers: {
+                         "Content-Type": "application/json",
+                         // 'Content-Type': 'application/x-www-form-urlencoded',
+                          },
+                    }).then((response) => response.json()).then((data) => {
+                        alert(data);
+                    })
                     document.getElementById("content").innerHTML = marked.parse("# Artikel " + id)
                 }
-                fetch
             </script>
         </div>
         <div id="footer" class="absolute bottom-0 w-full"><script>readHTML("./assets/elements/footer.html", "footer")</script></div>
