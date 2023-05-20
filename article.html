@@ -24,7 +24,7 @@
                          // 'Content-Type': 'application/x-www-form-urlencoded',
                           },
                     }).then((response) => response.json()).then((data) => {
-                        alert(data[0]);
+                        alert(data[0].title);
                     })
                     document.getElementById("content").innerHTML = marked.parse("# Artikel " + id)
                 }
