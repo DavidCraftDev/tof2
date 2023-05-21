@@ -25,6 +25,8 @@
                           },
                     }).then((response) => response.json()).then((data) => {
                         alert(data[0].title);
+                        console.log(data[0])
+                        console.log(data)
                     })
                     document.getElementById("content").innerHTML = marked.parse("# Artikel " + id)
                 }
