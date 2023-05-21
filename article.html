@@ -11,6 +11,7 @@
     <body>
         <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
         <div id="content" class="align-middle pr-2 pl-2">
+            let debug
             <script>
                 var id = new URL(window.location.href).searchParams.get("id")
                 
@@ -25,7 +26,8 @@
                           },
                     }).then((response) => response.json()).then((data) => {
                         alert(data[0]);
-                        console.log(data[0][0])
+                        debug = data
+                        console.log(data[0])
                         console.log(data)
                     })
                     document.getElementById("content").innerHTML = marked.parse("# Artikel " + id)
