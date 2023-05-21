@@ -13,7 +13,7 @@
         let beschreibung = String(document.getElementById("beschreibung").value)
         let katerogie = String(document.getElementById("katerogie").value)
         let markdown = String(document.getElementById("markdown").value)
-        fetch("https://api-tof2.davidcraft.de/addarticle?title=" + String(title) + "&beschreibung=" + String(beschreibung) + "&katerogie=" + String(katerogie) + "&markdown=" + String(markdown), {
+        fetch("https://api-tof2.davidcraft.de/addarticle?title=" + title + "&beschreibung=" + beschreibung + "&katerogie=" + katerogie + "&markdown=" + markdown, {
             method: "POST",
             headers: {
              "Content-Type": "application/json",
