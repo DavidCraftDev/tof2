@@ -638,6 +638,11 @@ code {
   width: 100%;
 }
 
+.w-min {
+  width: -moz-min-content;
+  width: min-content;
+}
+
 .max-w-full {
   max-width: 100%;
 }
