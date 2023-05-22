@@ -6,11 +6,24 @@
         <title>Suche - Teacher of Future 2</title>
         <link href="./assets/css/output.css" rel="stylesheet">
         <script src="./assets/js/htmlReader.js"></script>
+        <script src="./assets/plugins/marked.min.js"></script>
     </head>
     <body>
         <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
-        <div id="content" class="align-middle">
-        
+        <div id="content" class="align-middle p-2">
+            <script>
+                fetch("https://api-tof2.davidcraft.de/article?id=" + id, {
+                    method: "GET",
+                    headers: {
+                     "Content-Type": "application/json",
+                     // 'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                }).then((response) => response.json()).then((data) => {
+                    for (const element of data) {
+                        document.getElementById("content").innerHTML += "data.Title"
+                    }
+                })
+            </script>
         </div>
         <div id="footer" class="absolute bottom-0 w-full"><script>readHTML("./assets/elements/footer.html", "footer")</script></div>
     </body>
