@@ -20,7 +20,7 @@
                     },
                 }).then((response) => response.json()).then((data) => {
                     for (const element of data) {
-                        document.getElementById("content").innerHTML += "<a href='./article.html?id=" + element.ID + "'><div class='bg-gray-200 rounded-lg p-2 m-2'><h1 class='text-2xl'>" + element.Title + "</h1><p>" + element.Beschreibung + "</p></div></a>"
+                        document.getElementById("content").innerHTML += "<a href='./article.html?id=" + element.ID + "'><div class='border-2 border-gray-400 bg-gray-200 hover:border-black rounded-lg p-2 m-2'><h1 class='text-xl'>" + element.Title + "</h1><p>" + element.Beschreibung + "</p></div></a>"
                     }
                 })
             </script>
