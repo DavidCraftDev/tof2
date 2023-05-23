@@ -14,6 +14,8 @@
             <input type="text" id="search" placeholder="Suche..." class="m-2 rounded-lg border-2 border-black-400 bg-gray-100 p-5 w-max">
             <div id="items"></div>
             <script>
+                var searchParm = new URL(window.location.href).searchParams.get("search")
+                document.getElementById("search").value = searchParm
                 let items
                 fetch("https://api-tof2.davidcraft.de/articles", {
                     method: "GET",
@@ -23,7 +25,7 @@
                     },
                 }).then((response) => response.json()).then((data) => {
                     items = data
-                    updateItems("")
+                    updateItems(document.getElementById("search").value)
                 })
                 function updateItems(filter) {
                     document.getElementById("items").innerHTML = ""
