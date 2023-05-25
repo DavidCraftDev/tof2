@@ -12,7 +12,7 @@
     <body>
         <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
         <div id="content" class="align-middle p-2">
-            <input type="text" id="searchSite" placeholder="Suche..." class="m-2 rounded-lg border-2 border-black-400 bg-gray-100 p-5 w-full">
+            <input type="text" id="searchSite" placeholder="Suche..." class="rounded-lg border-2 border-black-400 bg-gray-100 p-5 w-full">
             <div id="items"></div>
             <script>
                 var searchParm = new URL(window.location.href).searchParams.get("search")
