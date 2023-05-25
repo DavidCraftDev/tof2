@@ -634,6 +634,10 @@ code {
   display: none;
 }
 
+.w-52 {
+  width: 13rem;
+}
+
 .w-full {
   width: 100%;
 }
