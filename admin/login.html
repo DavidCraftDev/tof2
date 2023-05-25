@@ -1,6 +1,7 @@
 <input type="text" placeholder="Username" id="username">
 <input type="text" placeholder="Password" id="password">
 <button>Login</button>
+<p>Mit dem Anmelden werden Cookies gesetzt!</p>
 <script>
     document.querySelector("button").addEventListener("click", () => {
         let username = document.getElementById("username").value;
@@ -17,6 +18,8 @@
             })
         }).then((response) => response.json()).then((data) => {
             alert(data);
+            document.cookie = "username=" + username + " path=/";
+            document.cookie = "password=" + password + " path=/"; 
         })
     });
 </script>
