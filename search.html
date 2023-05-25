@@ -12,11 +12,11 @@
     <body>
         <div id="navbar"><script>readHTML("./assets/elements/navbar.html", "navbar")</script></div>
         <div id="content" class="align-middle p-2">
-            <input type="text" id="search" placeholder="Suche..." class="m-2 rounded-lg border-2 border-black-400 bg-gray-100 p-5 w-max">
+            <input type="text" id="searchSite" placeholder="Suche..." class="m-2 rounded-lg border-2 border-black-400 bg-gray-100 p-5 w-full">
             <div id="items"></div>
             <script>
                 var searchParm = new URL(window.location.href).searchParams.get("search")
-                document.getElementById("search").value = searchParm
+                document.getElementById("searchSite").value = searchParm
                 let items
                 fetch("https://api-tof2.davidcraft.de/articles", {
                     method: "GET",
@@ -26,7 +26,7 @@
                     },
                 }).then((response) => response.json()).then((data) => {
                     items = data
-                    updateItems(document.getElementById("search").value.toLowerCase())
+                    updateItems(document.getElementById("searchSite").value.toLowerCase())
                 })
                 function updateItems(filter) {
                     document.getElementById("items").innerHTML = ""
@@ -34,8 +34,8 @@
                         if(element.Title.toLowerCase().includes(filter) || element.Beschreibung.toLowerCase().includes(filter) || element.Katerogie.toLowerCase().includes(filter)) document.getElementById("items").innerHTML += "<a href='./article.html?id=" + element.ID + "'><div class='border-2 border-gray-400 bg-gray-200 hover:border-black rounded-lg p-2 m-2'><h1 class='text-xl'>" + element.Title + "</h1><p>" + element.Beschreibung + "</p><p class='bg-gray-600 w-min p-[0.5]'>" + element.Katerogie + "</p></div></a>"
                     }
                 } 
-                document.getElementById("search").addEventListener("input", function (e) {
-                    updateItems(document.getElementById("search").value.toLowerCase())
+                document.getElementById("searchSite").addEventListener("input", function (e) {
+                    updateItems(document.getElementById("searchSite").value.toLowerCase())
             });
             </script>
         </div>
